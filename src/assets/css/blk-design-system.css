@@ -13737,7 +13737,6 @@ img {
 
 .navbar.navbar-transparent {
   background: transparent !important;
-  padding-top: 25px;
 }
 
 .navbar.bg-white .navbar-nav .search-bar.input-group i {
@@ -17803,7 +17802,7 @@ hr.line-deafult {
 }
 
 .section-coins {
-  margin-top: 120px;
+  padding-top: 120px;
 }
 
 .section-coins h1 {
@@ -18365,7 +18364,7 @@ hr.line-deafult {
     display: none;
   }
   .section-coins {
-    margin-top: 100px;
+    padding-top: 100px;
   }
   #carouselExampleIndicators {
     margin-top: 210px;

@@ -40,6 +40,26 @@
   margin-right: 20px;
 }
 
+.outer-wrapper {
+  position:relative;
+}
+
+/************ Statusbar Css ************/
+.top-status-bar {
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 500; 
+  color: #FFF;
+  background-color: #8b0000;
+  position:relative;
+}
+.top-status-bar a,
+.top-status-bar a:hover {
+  font-weight: 500;
+  color: #ffe700;
+  text-decoration: underline;
+}
+
 #navbar-full .navbar {
   border-radius: 0 !important;
   margin-bottom: 15px;
