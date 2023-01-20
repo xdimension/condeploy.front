@@ -5,8 +5,8 @@ export const Navbar = () => {
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
         <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="https://demos.creative-tim.com/blk-design-system/index.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-            <span>BLK•</span> Design System
+            <a class="navbar-brand" href="/" rel="tooltip" title="Homepage" data-placement="bottom" target="_blank">
+            Member <span>Area</span>
             </a>
             <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar bar1"></span>
@@ -19,7 +19,7 @@ export const Navbar = () => {
             <div class="row">
                 <div class="col-6 collapse-brand">
                 <a>
-                    BLK•
+                    Member Area
                 </a>
                 </div>
                 <div class="col-6 collapse-close text-right">
@@ -31,28 +31,28 @@ export const Navbar = () => {
             </div>
             <ul class="navbar-nav">
             <li class="nav-item p-0">
-                <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+                <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <p class="d-lg-none d-xl-none">Instagram</p>
+                </a>
+            </li>
+            <li class="nav-item p-0">
+                <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com" target="_blank">
                 <i class="fab fa-twitter"></i>
                 <p class="d-lg-none d-xl-none">Twitter</p>
                 </a>
             </li>
             <li class="nav-item p-0">
-                <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+                <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com" target="_blank">
                 <i class="fab fa-facebook-square"></i>
                 <p class="d-lg-none d-xl-none">Facebook</p>
                 </a>
             </li>
-            <li class="nav-item p-0">
-                <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-                <i class="fab fa-instagram"></i>
-                <p class="d-lg-none d-xl-none">Instagram</p>
-                </a>
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Homepage</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../index.html">Back to Kit</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/creativetimofficial/blk-design-system/issues">Have an issue?</a>
+                <a class="nav-link" href="https://github.comofficial/blk-design-system/issues">Have an issue?</a>
             </li>
             </ul>
         </div>
