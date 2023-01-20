@@ -12409,6 +12409,7 @@ fieldset[disabled] .btn-link.active {
 }
 
 .footer {
+  margin-top: 80px;
   padding: 50px 0;
   border-top: 2px solid #435DB5;
   background: radial-gradient(ellipse at bottom, #292D61 30%, #171941 80%);
@@ -17802,7 +17803,7 @@ hr.line-deafult {
 }
 
 .section-coins {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .section-coins h1 {

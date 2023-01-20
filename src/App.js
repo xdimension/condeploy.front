@@ -1,5 +1,3 @@
-import logo from './logo.svg'
-import './App.css'
 import "./assets/css/blk-design-system.css"
 import "./assets/css/page.css"
 import "./assets/css/nucleo-icons.css"
