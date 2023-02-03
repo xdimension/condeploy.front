@@ -4,7 +4,7 @@ export const Navbar = () => {
 
     return (
         <>
-    <nav className="navbar navbar-absolute navbar-expand-lg navbar-transparent " color-on-scroll="100">
+    <nav className="navbar navbar-absolute navbar-expand-lg navbar-transparent ">
         <div className="container">
         <div className="navbar-translate">
             <a className="navbar-brand" href="/" rel="tooltip" title="Homepage" data-placement="bottom" target="_blank">

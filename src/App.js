@@ -1,30 +1,17 @@
-import "./assets/css/blk-design-system.css"
-import "./assets/css/page.css"
-import "./assets/css/nucleo-icons.css"
-import { Web3Provider } from './components/Web3Provider'
-import { StatusBar } from './components/StatusBar'
-import { Navbar } from './components/Navbar'
-import { Project } from './components/Project'
-import { Footer } from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import { AuthProvider } from './components/AuthProvider';
+import AuthPage from './pages/Auth'
+import ProjectsPage from './pages/Projects'
 
 function App() {
   return (
-    <>
-    <Web3Provider>
-      <div className="App">
-        <StatusBar />
-        
-        <section className="outer-wrapper">
-          <Navbar />
-
-          <Project />
-
-          <Footer />
-        </section>
-      </div>
-    </Web3Provider>
-  </>
-  )
+      <AuthProvider>
+        <Routes>
+          <Route path="/login" element={<AuthPage />} />
+          <Route path="/" element={<ProjectsPage />} />
+        </Routes>
+      </AuthProvider>
+    )
 }
 
 export default App;

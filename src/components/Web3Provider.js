@@ -21,7 +21,6 @@ export const Web3Context = createContext({
     networkId: 0,
     vmContract: null,
     address: '',
-    isOwner: false,
 })
 
 export function Web3Provider({children}) 
