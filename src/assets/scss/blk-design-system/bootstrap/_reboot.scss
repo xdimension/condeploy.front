@@ -375,7 +375,6 @@ input[type="checkbox"] {
   padding: 0; // 2. Remove the padding in IE 10-
 }
 
-
 input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
@@ -387,6 +386,13 @@ input[type="month"] {
   // and https://github.com/twbs/bootstrap/issues/11266
   -webkit-appearance: listbox;
 }
+
+
+input:-webkit-autofill { 
+  transition: background-color 1s 5000s; 
+  -webkit-text-fill-color: $input-color;
+}
+
 
 textarea {
   overflow: auto; // Remove the default vertical scrollbar in IE.
