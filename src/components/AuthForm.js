@@ -14,12 +14,7 @@ export const AuthForm = () => {
                                 password: "",
                             })
 
-    const {authData, doSignup, doLogin} = useContext(AuthContext)
-
-    const signUpHandler = async() => {
-        console.log(formSignup)
-        await doSignup(formSignup.email, formSignup.password, formSignup.passwordConfirm, formSignup.name)
-    }
+    const {doSignup, doLogin} = useContext(AuthContext)
 
     return (
         <section className="section section-lg section-signin">
@@ -69,7 +64,7 @@ export const AuthForm = () => {
                             </div>
                             </div>
                             <input 
-                                type="text" 
+                                type="password" 
                                 name="password" 
                                 value={formSignup.password} 
                                 onChange={e => setFormSignup({...formSignup, password: e.target.value})}
@@ -84,7 +79,7 @@ export const AuthForm = () => {
                             </div>
                             </div>
                             <input 
-                                type="text" 
+                                type="password" 
                                 name="passwordConfirm" 
                                 value={formSignup.passwordConfirm} 
                                 onChange={e => setFormSignup({...formSignup, passwordConfirm: e.target.value})}
@@ -134,7 +129,7 @@ export const AuthForm = () => {
                             </div>
                             </div>
                             <input 
-                                type="text" 
+                                type="password" 
                                 value={formSignin.password}
                                 onChange={e => setFormSignin({...formSignin, password: e.target.value})} 
                                 placeholder="Password" 

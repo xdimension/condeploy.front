@@ -1,11 +1,11 @@
 import { useState, createContext, useEffect } from "react";
-import { Navigate } from "react-router-dom";
 import PocketBase from 'pocketbase'
 
 export const AuthContext = createContext()
 
 export function AuthProvider({children}) 
 {
+    const BASE_PATH = '/clients'
     const pb = new PocketBase(process.env.REACT_APP_PB_SERVER_URL)
 
     const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -17,7 +17,7 @@ export function AuthProvider({children})
 
             setAuthData(authData)
 
-            window.location = '/clients'
+            window.location = BASE_PATH
         } catch(err) {
             console.log(err)
         }
@@ -34,6 +34,16 @@ export function AuthProvider({children})
         console.log(authData)
     }
 
+    const doSignout = async() => {
+        try {
+            await fetch(BASE_PATH + '/logout')
+
+            window.location = BASE_PATH + '/login'
+        } catch(err) {
+            console.log(err)
+        }
+    }
+
     useEffect(() => {
         if (authData?.record?.id) {
             setIsLoggedIn(true)
@@ -47,6 +57,7 @@ export function AuthProvider({children})
                 authData,
                 doLogin,
                 doSignup,
+                doSignout
             }}>
             {children}
         </AuthContext.Provider>
