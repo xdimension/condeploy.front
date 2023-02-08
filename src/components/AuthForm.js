@@ -14,7 +14,7 @@ export const AuthForm = () => {
                                 password: "",
                             })
 
-    const {doSignup, doLogin} = useContext(AuthContext)
+    const {authMessage, doSignup, doLogin} = useContext(AuthContext)
 
     return (
         <section className="section section-lg section-signin">
@@ -108,6 +108,10 @@ export const AuthForm = () => {
                     </div>
                     <div className="card-body">
                         <form className="form">
+                        {authMessage &&
+                        <div className="form-message">
+                            {authMessage}
+                        </div>}
                         <div className="input-group">
                             <div className="input-group-prepend">
                             <div className="input-group-text">

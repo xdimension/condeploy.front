@@ -10,28 +10,53 @@ export function AuthProvider({children})
 
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [authData, setAuthData] = useState({})
+    const [authMessage, setAuthMessage] = useState("")
 
     const doLogin = async(login, password) => {
-        try {
-            const authData = await pb.collection('users').authWithPassword(login, password);
+        if (login == "" || password == "") {
+            setAuthMessage("Please enter your email and password")
+        }
 
-            setAuthData(authData)
+        if (login != "" && password != "") {
+            try {
+                const authData = await pb.collection('users').authWithPassword(login, password);
 
-            window.location = BASE_PATH
-        } catch(err) {
-            console.log(err)
+                setAuthData(authData)
+
+                window.location = BASE_PATH
+            } catch(err) {
+                setAuthMessage(
+                    <>
+                        {err.message}<br/>
+                        Make sure you entered your email and password correctly.
+                    </>
+                )
+                
+                console.log(err)
+            }
         }
     }
 
     const doSignup = async(email, password, passwordConfirm, name) => {
-        const authData = await pb.collection('users').create({
-            email:           email,
-            password:        password,
-            passwordConfirm: passwordConfirm,
-            name:            name,
-        });   
-
-        console.log(authData)
+        try {
+            const authData = await pb.collection('users').create({
+                email:           email,
+                password:        password,
+                passwordConfirm: passwordConfirm,
+                name:            name,
+            });  
+            
+            setAuthData(authData)
+        } catch(err) {
+            setAuthMessage(
+                <>
+                    {err.message}<br/>
+                    Make sure you filled the sign-up form correctly.
+                </>
+            )
+            
+            console.log(err)
+        } 
     }
 
     const doSignout = async() => {
@@ -55,6 +80,7 @@ export function AuthProvider({children})
             value={{
                 isLoggedIn,
                 authData,
+                authMessage,
                 doLogin,
                 doSignup,
                 doSignout

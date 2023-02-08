@@ -11017,6 +11017,12 @@ fieldset[disabled] .btn-link.active {
   color: #ec250d;
 }
 
+.form-message {
+  padding: 0px 8px;
+  margin-bottom: 20px;
+  color: #ec250d;
+}
+
 img {
   max-width: 100%;
   border-radius: 0.2857rem;
