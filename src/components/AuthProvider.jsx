@@ -6,7 +6,7 @@ export const AuthContext = createContext()
 export function AuthProvider({children}) 
 {
     const BASE_PATH = '/clients'
-    const pb = new PocketBase(process.env.REACT_APP_PB_SERVER_URL)
+    const pb = new PocketBase(import.meta.env.VITE_PB_SERVER_URL)
 
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [authData, setAuthData] = useState({})

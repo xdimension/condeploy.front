@@ -1,4 +1,4 @@
-exports.config = {
+export const config = {
     appName: 'ContractDeployer',
     contract: {
         address: '0xbE5091ca8eE651808758A8804eEA71F9A6B1F170',

@@ -1,14 +1,14 @@
 import { createContext, useState, useCallback, useEffect } from "react"
 import Web3 from "web3"
 import { config } from "../config"
+import contractJson from "../contracts/Dhakon.json"
 
-
-const getContractJson = async() => {
-    return (await import('../contracts/' + config.contract.jsonFile)).default;
-}
+// const getContractJson = async() => {
+//     return (await import('../contracts/' + import.meta.env.VITE_CONTRACT_JSON)).default;
+// }
 
 const Contract = async(web3) => {
-    const contractJson = await getContractJson()
+    // const contractJson = await getContractJson()
     
     return new web3.eth.Contract(
         contractJson.abi,
