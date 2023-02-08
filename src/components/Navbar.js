@@ -1,13 +1,10 @@
-import { useLocation, useHref } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { useContext } from "react"
 import { ConnectToWallet } from "./ConnectToWallet"
 import { AuthContext } from './AuthProvider'
 
 export const Navbar = () => {
     const location = useLocation()
-
-    console.log(location.pathname)
-    const loginPath = useHref('login')
 
     const {doSignout} = useContext(AuthContext)
 
